@@ -25,7 +25,7 @@
         compatible = "zmk,combos";
 
         layer4_ESC {
-            bindings = <&lt 4 ESC>;
+            bindings = <&lt 3 ESC>;
             key-positions = <39 38>;
         };
 
@@ -76,24 +76,13 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E    &kp R          &kp T                                                          &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D    &kp F          &kp G                                  &kp F13                 &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
-&mt LEFT_SHIFT Z  &kp X         &kp C    &kp V          &kp B        &kp F14                   &kp F15                 &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp F16  &kp BACKSPACE  &lt 2 ENTER  &lt_to_layer_0 3 LANG2    &lt_to_layer_0 3 LANG1  &lt 1 SPACE                             &kp LEFT_ALT
+&kp Q  &kp W  &kp E      &kp R     &kp T                                                              &kp Y        &kp U  &kp I      &kp O    &kp P
+&kp A  &kp S  &kp D      &kp F     &kp G                                      &kp F13                 &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&kp Z  &kp X  &kp C      &kp V     &kp B            &kp F14                   &kp RS(SLASH)           &kp N        &kp M  &kp COMMA  &kp DOT  &mt RSHFT SLASH
+&none  &none  &kp LCTRL  &kp LALT  &lt 1 BACKSPACE  &lt_to_layer_0 2 SPACE    &lt_to_layer_0 2 ENTER  &lt 7 SPACE                             &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&scroll_up_down>;
-        };
-
-        layer_1 {
-            bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp NUMBER_4       &kp NUMBER_5                    &kp NUMBER_6  &kp NUMBER_7          &kp NUMBER_8           &kp NUMBER_9  &kp NUMBER_0
-&trans        &trans        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans                  &trans  &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans        &kp BACKSLASH
-&trans        &trans        &trans            &trans             &trans        &trans    &trans  &trans        &trans                &trans                 &trans        &kp PIPE
-&trans        &trans        &trans            &trans             &trans        &trans    &trans  &trans                                                                   &trans
-            >;
-
-            sensor-bindings = <&scroll_right_left>;
         };
 
         layer_2 {
@@ -149,6 +138,44 @@
             >;
 
             sensor-bindings = <&scroll_up_down>;
+        };
+
+        LOWER {
+            bindings = <
+&kp ESC  &kp F2  &kp NUMBER_3      &kp NUMBER_4       &kp NUMBER_5                               &kp NUMBER_6   &kp NUMBER_7          &kp NUMBER_8           &kp NUMBER_9  &kp NUMBER_0
+&trans   &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans                  &trans             &trans         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans        &kp BACKSLASH
+&trans   &trans  &trans            &trans             &trans        &trans    &kp RS(BACKSLASH)  &kp SEMICOLON  &kp EQUAL             &kp SINGLE_QUOTE       &kp GRAVE     &mt RSHFT BACKSLASH
+&trans   &trans  &trans            &trans             &trans        &trans    &trans             &trans                                                                    &trans
+            >;
+
+            sensor-bindings = <&scroll_right_left>;
+        };
+
+        RAISE {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+            >;
+        };
+
+        MOUSE2 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+            >;
+        };
+
+        ADJUST {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+            >;
         };
     };
 };
