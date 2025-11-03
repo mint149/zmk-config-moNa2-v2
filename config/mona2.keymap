@@ -4,6 +4,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
@@ -76,10 +77,10 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W  &kp E      &kp R     &kp T                                                              &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A  &kp S  &kp D      &kp F     &kp G                                      &kp F13                 &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&kp Z  &kp X  &kp C      &kp V     &kp B            &kp F14                   &kp RS(SLASH)           &kp N        &kp M  &kp COMMA  &kp DOT  &mt RSHFT SLASH
-&none  &none  &kp LCTRL  &kp LALT  &lt 1 BACKSPACE  &lt_to_layer_0 2 SPACE    &lt_to_layer_0 2 ENTER  &lt 7 SPACE                             &kp PRINTSCREEN
+&kp Q      &kp W  &kp E      &kp R     &kp T                                                              &kp Y        &kp U  &kp I      &kp O    &kp P
+&kp A      &kp S  &kp D      &kp F     &kp G                                      &kp F13                 &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&kp Z      &kp X  &kp C      &kp V     &kp B            &kp F14                   &kp RS(SLASH)           &kp N        &kp M  &kp COMMA  &kp DOT  &mt RSHFT SLASH
+&kp LSHFT  &none  &kp LCTRL  &kp LALT  &lt 1 BACKSPACE  &lt_to_layer_0 2 SPACE    &lt_to_layer_0 2 ENTER  &lt 7 SPACE                             &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -142,10 +143,10 @@
 
         LOWER {
             bindings = <
-&kp ESC  &kp F2  &kp F3 &kp F4 &kp F5                               &kp N1     &kp N2     &kp N3    &kp N4    &kp N5
-&kp F6 &kp F7 &kp F8 &kp F9 &kp F10                  &trans             &kp N6     &kp N7     &kp N8    &kp N9    &kp N0
-&kp F11 &kp F12  &trans            &trans             &trans        &trans    &kp RS(BACKSLASH)  &kp SEMICOLON  &kp EQUAL             &kp SINGLE_QUOTE       &kp GRAVE     &mt RSHFT BACKSLASH
-&trans   &trans  &trans            &trans             &trans        &trans    &trans             &trans                                                                    &trans
+&kp ESC  &kp F2   &kp F3  &kp F4  &kp F5                                &kp N1         &kp N2     &kp N3            &kp N4     &kp N5
+&kp F6   &kp F7   &kp F8  &kp F9  &kp F10            &trans             &kp N6         &kp N7     &kp N8            &kp N9     &kp N0
+&kp F11  &kp F12  &trans  &trans  &trans   &trans    &kp RS(BACKSLASH)  &kp SEMICOLON  &kp EQUAL  &kp SINGLE_QUOTE  &kp GRAVE  &mt RSHFT BACKSLASH
+&trans   &trans   &trans  &trans  &trans   &trans    &trans             &trans                                                 &trans
             >;
 
             sensor-bindings = <&scroll_right_left>;
@@ -153,19 +154,19 @@
 
         RAISE {
             bindings = <
-&kp ESC  &trans  &kp LBKT  &kp RBKT  &trans                                            &kp HOME   &kp RC(PG_UP)  &kp RC(PG_DN)  &kp END  &kp DEL
-&trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans            &trans  &kp LEFT   &kp DOWN       &kp UP         &kp RIGHT  &trans
-&trans  &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE  &trans  &trans          &kp RS(BACKSLASH)  &kp SEMICOLON  &kp EQUAL             &kp SINGLE_QUOTE       &kp GRAVE     &mt RSHFT BACKSLASH
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+&kp ESC  &trans  &kp LBKT              &kp RBKT               &trans                               &kp HOME       &kp RC(PG_UP)  &kp RC(PG_DN)     &kp END    &kp DEL
+&trans   &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans            &trans             &kp LEFT       &kp DOWN       &kp UP            &kp RIGHT  &trans
+&trans   &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans  &trans    &kp RS(BACKSLASH)  &kp SEMICOLON  &kp EQUAL      &kp SINGLE_QUOTE  &kp GRAVE  &mt RSHFT BACKSLASH
+&trans   &trans  &trans                &trans                 &trans  &trans    &trans             &trans                                                     &trans
             >;
         };
 
         MOUSE2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &kp RC(RS(TAB))  &mkp LCLK  &mkp RCLK           &kp RC(TAB)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                    &trans           &trans     &trans     &trans       &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &kp RC(RS(TAB))  &mkp LCLK  &mkp RCLK  &kp RC(TAB)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans           &mkp MCLK  &trans     &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                              &trans
             >;
         };
 
@@ -173,8 +174,8 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &out OUT_TOG  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3
 &trans  &trans  &trans  &trans  &trans            &trans  &bt BT_CLR    &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans         &trans         &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                                     &trans
             >;
         };
     };
