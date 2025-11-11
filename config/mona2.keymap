@@ -80,7 +80,7 @@
 &kp Q      &kp W  &kp E  &kp R     &kp T                                                              &kp Y        &kp U  &kp I      &kp O    &kp P
 &kp A      &kp S  &kp D  &kp F     &kp G                                      &kp A                   &kp H        &kp J  &kp K      &kp L    &kp MINUS
 &kp Z      &kp X  &kp C  &kp V     &kp B            &kp H                     &kp D                   &kp N        &kp M  &kp COMMA  &kp DOT  &mt RSHFT SLASH
-&kp LSHFT  &none  &kp B  &kp LALT  &lt 1 BACKSPACE  &lt_to_layer_0 2 SPACE    &lt_to_layer_0 2 ENTER  &lt 7 SPACE                             &kp PRINTSCREEN
+&kp LSHFT  &kp X  &kp B  &kp LALT  &lt 1 BACKSPACE  &lt_to_layer_0 2 SPACE    &lt_to_layer_0 2 ENTER  &lt 7 SPACE                             &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&scroll_up_down>;
