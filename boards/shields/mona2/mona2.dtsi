@@ -97,7 +97,7 @@
             <&zip_temp_layer 1 500>;                            //オートマウスレイヤーの選択
 
 		scroller {
-			layers = <SCROLL_L_LAYER>;
+			layers = <2>;
 			input-processors =
 				<&zip_xy_to_scroll_mapper>,
 				<&zip_scroll_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>,
