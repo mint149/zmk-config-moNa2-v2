@@ -35,7 +35,7 @@
             key-positions = <11 12>;
         };
 
-        QW_TAB {
+        WE_TAB {
             bindings = <&kp TAB>;
             timeout-ms = <20>;
             key-positions = <1 2>;
@@ -44,52 +44,51 @@
         DF_LANG2 {
             bindings = <&kp LANG2>;
             timeout-ms = <20>;
-            key-positions = <15 16>;
+            key-positions = <12 13>;
         };
 
         JK_LANG1 {
             bindings = <&kp LANG1>;
             timeout-ms = <20>;
-            key-positions = <19 20>;
+            key-positions = <17 18>;
         };
 
         YU_CUT {
             bindings = <&kp LG(X)>;
             timeout-ms = <20>;
-            key-positions = <6 7>;
+            key-positions = <6 5>;
         };
 
         HJ_COPY {
             bindings = <&kp LG(C)>;
             timeout-ms = <20>;
-            key-positions = <18 19>;
+            key-positions = <16 17>;
         };
 
         RT_REDO {
             bindings = <&kp LG(Y)>;
             timeout-ms = <20>;
-            key-positions = <4 5>;
+            key-positions = <4 3>;
         };
 
         FG_SEL {
             bindings = <&kp LG(A)>;
             timeout-ms = <20>;
-            key-positions = <16 17>;
+            key-positions = <13 14>;
         };
 
         VB_UNDO {
             bindings = <&kp LG(Z)>;
             timeout-ms = <20>;
-            key-positions = <28 29>;
+            key-positions = <25 24>;
         };
 
         NM_PASTE {
             bindings = <&kp RG(V)>;
             timeout-ms = <20>;
-            key-positions = <30 31>;
+            key-positions = <28 29>;
         };
     };
-
 
     macros {
         to_layer_0: to_layer_0 {
@@ -153,10 +152,10 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp W  &kp E      &kp R     &kp T                                                              &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A      &kp S  &kp D      &kp F     &kp G                                      &kp F13                 &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&kp Z      &kp X  &kp C      &kp V     &kp B            &kp F14                   &kp RS(SLASH)           &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LGUI  &none  &kp LSHFT  &kp LALT  &lt_to_layer_0 3 BACKSPACE  &lt_to_layer_0 2 SPACE    &lt_to_layer_0 2 ENTER  &lt_to_layer_0 3 SPACE                             &kp PRINTSCREEN
+&kp Q     &kp W  &kp E      &kp R     &kp T                                                   &kp Y                   &kp U  &kp I      &kp O    &kp P
+&kp A     &kp S  &kp D      &kp F     &kp G                                    &kp F13        &kp H                   &kp J  &kp K      &kp L    &kp SEMICOLON
+&kp Z     &kp X  &kp C      &kp V     &kp B                       &kp F14      &kp RS(SLASH)  &kp N                   &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LGUI  &none  &kp LSHFT  &kp LALT  &lt_to_layer_0 3 BACKSPACE  &kp SPACE    &kp RCTRL      &lt_to_layer_0 4 SPACE                             &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -166,7 +165,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans           &trans     &trans     &trans       &trans
 &trans  &trans  &trans  &trans  &trans            &trans  &kp RC(RS(TAB))  &mkp LCLK  &mkp RCLK  &kp RC(TAB)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans           &mkp MCLK  &trans     &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans           &mkp MCLK  &mo 2      &trans       &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                              &trans
             >;
 
@@ -186,10 +185,10 @@
 
         LOWER {
             bindings = <
-&kp ESC  &kp F2   &kp F3  &kp F4  &kp F5                                &kp N1         &kp N2     &kp N3            &kp N4     &kp N5
-&kp F6   &kp F7   &kp F8  &kp F9  &kp F10            &trans             &kp N6         &kp N7     &kp N8            &kp N9     &kp N0
-&kp F11  &kp F12  &trans  &trans  &trans   &trans    &kp RS(BACKSLASH)  &kp SEMICOLON  &kp EQUAL  &kp SINGLE_QUOTE  &kp GRAVE  &kp BACKSLASH
-&trans   &trans   &trans  &trans  &trans   &trans    &trans             &trans                                                 &trans
+&kp ESC  &kp F2   &kp F3  &kp F4  &kp F5                                &kp N1     &kp N2     &kp N3            &kp N4     &kp N5
+&kp F6   &kp F7   &kp F8  &kp F9  &kp F10            &trans             &kp N6     &kp N7     &kp N8            &kp N9     &kp N0
+&kp F11  &kp F12  &trans  &trans  &trans   &trans    &kp RS(BACKSLASH)  &kp MINUS  &kp EQUAL  &kp SINGLE_QUOTE  &kp GRAVE  &kp BACKSLASH
+&trans   &trans   &trans  &trans  &trans   &trans    &trans             &trans                                             &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -197,10 +196,10 @@
 
         RAISE {
             bindings = <
-&kp ESC  &trans  &kp LBKT              &kp RBKT               &trans                               &kp HOME       &kp RC(PG_UP)  &kp RC(PG_DN)     &kp END    &kp DEL
-&trans   &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans            &trans             &kp LEFT       &kp DOWN       &kp UP            &kp RIGHT  &trans
-&trans   &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans  &trans    &kp RS(BACKSLASH)  &kp SEMICOLON  &kp EQUAL      &kp SINGLE_QUOTE  &kp GRAVE  &kp BACKSLASH
-&trans   &trans  &trans                &trans                 &trans  &trans    &trans             &trans                                                     &trans
+&kp ESC  &trans  &kp LBKT              &kp RBKT               &trans                               &kp HOME   &kp RC(PG_UP)  &kp RC(PG_DN)     &kp END    &kp DEL
+&trans   &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans            &trans             &kp LEFT   &kp DOWN       &kp UP            &kp RIGHT  &trans
+&trans   &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans  &trans    &kp RS(BACKSLASH)  &kp MINUS  &kp EQUAL      &kp SINGLE_QUOTE  &kp GRAVE  &kp BACKSLASH
+&trans   &trans  &trans                &trans                 &trans  &trans    &trans             &trans                                                 &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -215,6 +214,15 @@
             >;
 
             sensor-bindings = <&scroll_up_down>;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        Adjust {
+            if-layers = <3 4>;
+            then-layer = <5>;
         };
     };
 };
