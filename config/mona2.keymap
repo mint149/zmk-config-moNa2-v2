@@ -30,11 +30,6 @@
             key-positions = <39 38>;
         };
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
-        };
-
         WE_TAB {
             bindings = <&kp TAB>;
             timeout-ms = <20>;
@@ -152,10 +147,10 @@
 
         default_layer {
             bindings = <
-&kp Q     &kp W  &kp E      &kp R     &kp T                                                   &kp Y                   &kp U  &kp I      &kp O    &kp P
-&kp A     &kp S  &kp D      &kp F     &kp G                                    &kp F13        &kp H                   &kp J  &kp K      &kp L    &kp SEMICOLON
-&kp Z     &kp X  &kp C      &kp V     &kp B                       &kp F14      &kp RS(SLASH)  &kp N                   &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LGUI  &none  &kp LSHFT  &kp LALT  &lt_to_layer_0 3 BACKSPACE  &kp SPACE    &kp RCTRL      &lt_to_layer_0 4 ENTER                             &kp PRINTSCREEN
+&kp Q     &kp W  &kp E      &kp R     &kp T                                                          &kp Y                   &kp U  &kp I      &kp O    &kp P
+&kp A     &kp S  &kp D      &kp F     &kp G                                           &kp F13        &kp H                   &kp J  &kp K      &kp L    &kp SEMICOLON
+&kp Z     &kp X  &kp C      &kp V     &kp B                       &kp F14             &kp RS(SLASH)  &kp N                   &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LGUI  &none  &kp LSHFT  &kp LALT  &lt_to_layer_0 3 BACKSPACE  &mt2 LSHFT SPACE    &kp RCTRL      &lt_to_layer_0 4 ENTER                             &kp RGUI
             >;
 
             sensor-bindings = <&scroll_up_down>;
